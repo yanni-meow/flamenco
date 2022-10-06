@@ -1,5 +1,3 @@
-// menu behavior
-
 const openBtn = document.querySelector('.header_open_menu');
 const closeBtn = document.querySelector('.menu_close');
 const menu = document.querySelector('.menu_box');

@@ -95,7 +95,30 @@
                 </section>
 
                 <section>
-                    <div id="slider">SLIDER</div>
+                    <div class="slider">
+                        <input class="photo_radio" type="radio" name="photos" id="photo-1" checked/>
+                        <div data-value="1" class="photo bordered cover"><img class="full-size" src="assets/slider/1.png" alt="#"></div>
+
+                        <input class="photo_radio" type="radio" name="photos" id="photo-2" />
+                        <div data-value="2" class="photo bordered cover"><img src="assets/slider/2.png" alt="#"></div>
+
+                        <input class="photo_radio" type="radio" name="photos" id="photo-3" />
+                        <div data-value="3" class="photo bordered cover"><img src="assets/slider/3.png" alt="#"></div>
+
+                        <input class="photo_radio" type="radio" name="photos" id="photo-4" />
+                        <div data-value="4" class="photo bordered cover"><img src="assets/slider/4.png" alt="#"></div>
+
+                        <input class="photo_radio" type="radio" name="photos" id="photo-5" />
+                        <div data-value="5" class="photo bordered cover"><img src="assets/slider/5.png" alt="#"></div>
+
+                        <div class="slider_controls">
+                            <label id="ph1" for="photo-1"></label>
+                            <label id="ph2" for="photo-2"></label>
+                            <label id="ph3" for="photo-3"></label>
+                            <label id="ph4" for="photo-4"></label>
+                            <label id="ph5" for="photo-5"></label>
+                        </div>
+                    </div>
                 </section>
 
                 <section>
@@ -283,18 +306,40 @@
                         <span class="accent">Feedback</span> from our students
                     </h1>
 
-                    <div class="feedback_box">
-                        <div class="feedback_item bordered bg_gray">
+                    <div class="slider">
+                        <input class="feedback_radio" type="radio" name="feedbacks" id="feedback-1" checked/>
+                        <div data-value="1" class="feedback_item bordered bg_gray">
                             <div class="feedback_header">
-                                <div class="feedback_icon">
-
-                                </div>
+                                <div class="feedback_icon">A</div>
                                 <p class="bold">Mary Smith</p>
                             </div>
                             <p>Sed vitae ullamcorper tellus, et lacinia nibh. Sed lobortis luctus laoreet. Quisque pulvinar justo eu purus vulputate sagittis.</p>
                             <p>Sed sit amet euismod metus. Phasellus luctus tincidunt leo, sed rutrum neque auctor suscipit.</p>
                         </div>
 
+                        <input class="feedback_radio" type="radio" name="feedbacks" id="feedback-2" />
+                        <div data-value="2" class="feedback_item bordered bg_gray">
+                            <div class="feedback_header">
+                                <div class="feedback_icon">B</div>
+                                <p class="bold">Meow meow</p>
+                            </div>
+                            <p>Sed sit amet euismod metus. Phasellus luctus tincidunt leo, sed rutrum neque auctor suscipit.</p>
+                        </div>
+
+                        <input class="feedback_radio" type="radio" name="feedbacks" id="feedback-3" />
+                        <div data-value="3" class="feedback_item bordered bg_gray">
+                            <div class="feedback_header">
+                                <div class="feedback_icon">C</div>
+                                <p class="bold">Gav gav</p>
+                            </div>
+                            <p>Sed vitae ullamcorper tellus, et lacinia nibh. Sed lobortis luctus laoreet. Quisque pulvinar justo eu purus vulputate sagittis.</p>
+                        </div>
+
+                        <div class="slider_controls">
+                            <label id="f1" for="feedback-1"></label>
+                            <label id="f2" for="feedback-2"></label>
+                            <label id="f3" for="feedback-3"></label>
+                        </div>
                     </div>
 
                     <button class="btn" onclick="">
@@ -334,6 +379,7 @@
             </main>
         </div>
 
-        <script defer src="/script/index.js"></script>
+        <script defer src="/script/menu.js"></script>
+        <script defer src="/script/slider.js"></script>
     </body>
 </html>
