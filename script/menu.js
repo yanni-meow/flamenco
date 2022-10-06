@@ -7,10 +7,10 @@ menu.addEventListener('wheel', (event) => event.preventDefault());
 menu.addEventListener('touchmove', (event) => event.preventDefault());
 
 openBtn.addEventListener('click', function () {
-    menu.classList.add('opened')
+    menu.classList.remove('hidden')
 })
 
-const handleClose = () => menu.classList.remove('opened')
+const handleClose = () => menu.classList.add('hidden')
 closeBtn.addEventListener('click', handleClose)
 items.forEach(el => {
     el.addEventListener('click', handleClose)
