@@ -146,7 +146,7 @@ header {
 section:first-of-type {
     height: calc(100vh - 86px);
     margin-top: 0;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 section:first-of-type .shadow {
