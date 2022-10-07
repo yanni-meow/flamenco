@@ -11,7 +11,9 @@
         <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
         <link rel="stylesheet" href="./styles/index.css">
+        <link rel="stylesheet" href="./styles/modals.css">
     </head>
+
     <body>
         <div class="container">
             <header>
@@ -22,8 +24,8 @@
                     <img src="assets/icons/menu.svg" alt="#">
                 </button>
 
-                <div class="menu_box hidden bordered bg_gray shadow">
-                    <button class="menu_close">
+                <div class="pop-up menu_box hidden bordered bg_gray shadow">
+                    <button data-value="menu_box" class="pop-up_close">
                         <img src="assets/icons/cross.svg" alt="#">
                     </button>
 
@@ -439,9 +441,25 @@
                     </div>
                 </footer>
             </main>
+
+            <div class="pop-up blur hidden"></div>
+
+            <div class="pop-up exit_intent bordered shadow bg_pink hidden">
+                <button data-value="exit_intent" class="pop-up_close">
+                    <img src="assets/icons/cross.svg" alt="#">
+                </button>
+
+                <h2 class="bold">Don’t miss<br/> a special offer for you</h2>
+                <button class="btn" onclick="">
+                    Try free lesson
+                </button>
+
+                <img src="assets/icons/star.svg" alt="#">
+            </div>
         </div>
 
         <script defer src="/script/menu.js"></script>
+        <script defer src="/script/modals.js"></script>
         <script defer src="/script/slider.js"></script>
         <script defer src="/script/spoiler.js"></script>
     </body>
