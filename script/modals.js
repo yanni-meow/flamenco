@@ -43,7 +43,7 @@ const onHistoryBack = () => {
 if (window.history && window.history.pushState) {
     window.history.pushState('forward', null, './');
     window.addEventListener('popstate', onHistoryBack);
-};
+}
 
 // scroll to top
 const negativeScrollHeight = document.body.scrollHeight / 20;
@@ -51,13 +51,13 @@ let lastScrollTop = 0,
     maxScrollTop = 0;
 
 const scrollEvent = () => {
-    const { scrollTop } = document.documentElement;
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
     if (scrollTop > lastScrollTop && scrollTop > maxScrollTop) maxScrollTop = scrollTop;
     if ((maxScrollTop - scrollTop) > negativeScrollHeight) {
         document.removeEventListener('scroll', scrollEvent);
         showExitIntentPopUp();
-    };
+    }
 
     lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
 };
