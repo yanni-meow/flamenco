@@ -1,7 +1,14 @@
 const spoilers = document.querySelectorAll('.faq_header');
 
-spoilers.forEach(header => {
-    header.addEventListener('click', () => {
-        header.nextElementSibling.classList.toggle('hidden');
+const onOpen = (item) => {
+    Array.from(item.children).forEach(child => {
+        if (child.classList.contains('plus') || child.classList.contains('minus')) {
+            child.classList.toggle('hidden')
+        }
     })
-})
+    item.nextElementSibling.classList.toggle('hidden');
+};
+
+spoilers.forEach(header => {
+    header.addEventListener('click', () => onOpen(header))
+});
